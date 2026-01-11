@@ -28,15 +28,16 @@ export default function Home() {
         <div className="absolute top-[-15%] left-[-5%] w-[100%] md:w-[60%] h-[60%] bg-blue-900/10 blur-[100px] md:blur-[140px] rounded-full"></div>
       </div>
 
-      {/* Navbar */}
-      <nav className="relative z-50 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-6 md:px-12 py-8 md:py-16 gap-6 md:gap-0">
+      {/* Navbar - Mobilde Contact Gizlendi, Tarih Sağa Çekildi */}
+      <nav className="relative z-50 max-w-7xl mx-auto flex flex-row justify-between items-center px-6 md:px-12 py-8 md:py-16">
         <div className="text-2xl md:text-3xl font-black-custom tracking-tighter italic">
           <span className="text-blue-600 drop-shadow-[0_0_15px_rgba(37,99,235,0.8)]">zzafwr</span>
           <span className="text-gray-500">.dev_</span>
         </div>
-        <div className="flex flex-wrap justify-center gap-6 md:gap-16 items-center font-black-custom text-[10px] md:text-[13px] tracking-[0.3em] md:tracking-[0.4em] uppercase">
+        <div className="flex items-center font-black-custom text-[10px] md:text-[13px] tracking-[0.3em] md:tracking-[0.4em] uppercase">
           <button className="text-gray-500 hover:text-white transition-all bg-transparent border-none cursor-pointer">2020 — 2026</button>
-          <button className="px-8 md:px-12 py-3 md:py-4 border border-blue-900/40 rounded-full bg-transparent text-white cursor-pointer transition-all hover:border-blue-500 hover:bg-blue-600/5 font-black tracking-[0.2em]">
+          {/* Contact butonu sadece mobilden büyük ekranlarda (md:) görünür */}
+          <button className="hidden md:block ml-16 px-12 py-4 border border-blue-900/40 rounded-full bg-transparent text-white cursor-pointer transition-all hover:border-blue-500 hover:bg-blue-600/5 font-black tracking-[0.2em]">
             CONTACT
           </button>
         </div>
@@ -46,34 +47,32 @@ export default function Home() {
       <section className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 pb-20 md:pb-32">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
           
-          {/* Sol: Başlık ve Giriş */}
-          <div className="lg:col-span-7 space-y-8 md:space-y-12 text-center lg:text-left">
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="inline-flex items-center gap-4 px-4 md:px-6 py-2 rounded-full bg-blue-950/20 border border-blue-900/30 text-[9px] md:text-[11px] font-black-custom uppercase tracking-[0.4em] md:tracking-[0.5em] text-blue-500 mx-auto lg:mx-0">
+          <div className="lg:col-span-7 space-y-8 md:space-y-12 text-left">
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="inline-flex items-center gap-4 px-4 md:px-6 py-2 rounded-full bg-blue-950/20 border border-blue-900/30 text-[9px] md:text-[11px] font-black-custom uppercase tracking-[0.4em] md:tracking-[0.5em] text-blue-500">
               <span className="w-2.5 h-2.5 rounded-full bg-blue-600 shadow-[0_0_12px_#2563eb] animate-pulse"></span>
               EST. 2020 // EXPERT DEVELOPER
             </motion.div>
 
-            <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="font-black-custom leading-[0.9] md:leading-[0.85] tracking-[-0.05em] uppercase italic blue-glow-text" style={{ fontSize: 'clamp(45px, 12vw, 110px)' }}>
+            <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="font-black-custom leading-[0.9] md:leading-[0.85] tracking-[-0.05em] uppercase italic blue-glow-text" style={{ fontSize: 'clamp(40px, 12vw, 110px)' }}>
               ZZAFWR <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-500 to-white">MEDİA</span>
             </motion.h1>
 
-            <p className="text-gray-500 text-lg md:text-2xl font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+            <p className="text-gray-500 text-base md:text-2xl font-light leading-relaxed max-w-xl">
               "6 Yıllık Tecrübe, Sayısız Çözüm." <br />
               <span className="text-white font-bold italic">2020 yılında </span> başlayan bu serüven, bugün yüksek performanslı sistemlerle devam ediyor. 
-              Sorun çözmek hobim, <span className="text-blue-500 italic font-bold underline underline-offset-4">kusursuz kod </span> ise standardım.
             </p>
 
             {/* Yetenek Kartları */}
-            <div className="grid sm:grid-cols-2 gap-4 md:gap-6 pt-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 pt-6">
               <SkillCard 
                 icon={<MessageSquare size={30} />} 
                 title="Discord Bot" 
-                desc="Gelişmiş API entegrasyonlu, moderasyon ve ekonomi botları." 
+                desc="Gelişmiş API entegrasyonlu botlar." 
               />
               <SkillCard 
                 icon={<MonitorCheck size={30} />} 
                 title="Web Design" 
-                desc="Modern, hızlı ve SEO uyumlu full-stack web projeleri." 
+                desc="Modern ve hızlı full-stack projeler." 
               />
             </div>
           </div>
@@ -84,19 +83,15 @@ export default function Home() {
             <StatsCard icon={<Code2 size={24}/>} title="BOT ENGINE" val="NODE.JS" />
             <StatsCard icon={<Zap size={24}/>} title="DATABASE" val="MONGODB" />
             
-            <div className="p-8 md:p-10 rounded-[24px] md:rounded-[32px] bg-blue-600/10 border border-blue-600/20 mt-6 md:mt-10 backdrop-blur-sm shadow-[0_20px_50px_rgba(0,0,0,0.3)] text-center lg:text-left">
+            <div className="p-8 md:p-10 rounded-[24px] md:rounded-[32px] bg-blue-600/10 border border-blue-600/20 mt-6 md:mt-10 backdrop-blur-sm shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
                 <h4 className="font-black-custom text-xl italic mb-4">HAZIR MISIN?</h4>
-                <p className="text-gray-400 text-sm mb-8 font-light leading-relaxed">Projelerini hayata geçirmek için 6 yıllık tecrübeyle buradayım.</p>
                 
-                <div className="flex justify-center lg:justify-start gap-8">
+                <div className="flex gap-8">
                     <a href="https://github.com/zzafwr" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-500 transition-all transform hover:scale-110">
                         <Github size={28} />
                     </a>
                     <a href="https://instagram.com/zzafwr" target="_blank" rel="noopener noreferrer" className="text-white hover:text-pink-500 transition-all transform hover:scale-110">
                         <Instagram size={28} />
-                    </a>
-                    <a href="#" className="text-white hover:text-green-500 transition-all transform hover:scale-110">
-                        <Music size={28} />
                     </a>
                 </div>
             </div>
@@ -110,11 +105,11 @@ export default function Home() {
 
 function SkillCard({ icon, title, desc }: any) {
   return (
-    <div className="group p-6 md:p-8 bg-[#080808] border border-white/[0.05] rounded-[24px] md:rounded-[32px] hover:border-blue-600/40 transition-all text-left">
-      <div className="text-blue-600 mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 drop-shadow-[0_0_10px_rgba(37,99,235,0.3)]">
+    <div className="group p-6 bg-[#080808] border border-white/[0.05] rounded-[24px] hover:border-blue-600/40 transition-all text-left">
+      <div className="text-blue-600 mb-4 group-hover:scale-110 transition-transform duration-300">
         {icon}
       </div>
-      <h3 className="font-black-custom text-xl md:text-2xl italic mb-3 uppercase tracking-tighter">{title}</h3>
+      <h3 className="font-black-custom text-lg md:text-2xl italic mb-2 uppercase tracking-tighter">{title}</h3>
       <p className="text-gray-500 text-xs md:text-sm leading-relaxed font-light">{desc}</p>
     </div>
   );
@@ -123,9 +118,9 @@ function SkillCard({ icon, title, desc }: any) {
 function StatsCard({ icon, title, val }: any) {
   return (
     <motion.div whileHover={{ x: 8 }} className="p-6 md:p-8 bg-[#0A0A0A] border border-white/[0.04] rounded-[20px] md:rounded-[28px] flex items-center justify-between group hover:border-blue-900/40 transition-all backdrop-blur-sm">
-      <div className="flex items-center gap-4 md:gap-6">
-        <div className="text-blue-600 transition-all drop-shadow-[0_0_8px_rgba(37,99,235,0.4)]">{icon}</div>
-        <div className="font-black-custom text-[9px] md:text-[11px] font-bold tracking-[0.2em] md:tracking-[0.3em] text-gray-600 uppercase">{title}</div>
+      <div className="flex items-center gap-4">
+        <div className="text-blue-600 drop-shadow-[0_0_8px_rgba(37,99,235,0.4)]">{icon}</div>
+        <div className="font-black-custom text-[9px] md:text-[11px] font-bold tracking-[0.2em] text-gray-600 uppercase">{title}</div>
       </div>
       <div className="font-black-custom text-lg md:text-2xl font-black italic text-white tracking-tighter">{val}</div>
     </motion.div>
