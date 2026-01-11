@@ -28,7 +28,7 @@ export default function Home() {
         <div className="absolute top-[-15%] left-[-5%] w-[100%] md:w-[60%] h-[60%] bg-blue-900/10 blur-[100px] md:blur-[140px] rounded-full"></div>
       </div>
 
-      {/* Navbar - Mobilde Contact Gizlendi, Tarih Sağa Çekildi */}
+      {/* Navbar - Mobilde Contact Gizli, Tarih Sağa Yaslı */}
       <nav className="relative z-50 max-w-7xl mx-auto flex flex-row justify-between items-center px-6 md:px-12 py-8 md:py-16">
         <div className="text-2xl md:text-3xl font-black-custom tracking-tighter italic">
           <span className="text-blue-600 drop-shadow-[0_0_15px_rgba(37,99,235,0.8)]">zzafwr</span>
@@ -36,7 +36,6 @@ export default function Home() {
         </div>
         <div className="flex items-center font-black-custom text-[10px] md:text-[13px] tracking-[0.3em] md:tracking-[0.4em] uppercase">
           <button className="text-gray-500 hover:text-white transition-all bg-transparent border-none cursor-pointer">2020 — 2026</button>
-          {/* Contact butonu sadece mobilden büyük ekranlarda (md:) görünür */}
           <button className="hidden md:block ml-16 px-12 py-4 border border-blue-900/40 rounded-full bg-transparent text-white cursor-pointer transition-all hover:border-blue-500 hover:bg-blue-600/5 font-black tracking-[0.2em]">
             CONTACT
           </button>
@@ -57,22 +56,27 @@ export default function Home() {
               ZZAFWR <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-500 to-white">MEDİA</span>
             </motion.h1>
 
-            <p className="text-gray-500 text-base md:text-2xl font-light leading-relaxed max-w-xl">
-              "6 Yıllık Tecrübe, Sayısız Çözüm." <br />
-              <span className="text-white font-bold italic">2020 yılında </span> başlayan bu serüven, bugün yüksek performanslı sistemlerle devam ediyor. 
+            {/* Sadece senin istediğin profesyonel metin */}
+            <p className="text-gray-500 text-base md:text-xl font-light leading-relaxed max-w-xl">
+              "4 yıllık sektör tecrübesiyle, yüksek performanslı 
+              <span className="text-blue-500 font-bold italic"> Discord bot mimarileri </span> 
+              ve ölçeklenebilir sistem altyapıları üzerine profesyonel çözümler üretiyorum. Teknik uzmanlığımı, projenin her aşamasında sürdürülebilir kod kalitesi ve kusursuz API entegrasyonuyla birleştiriyorum."
+              <span className="block mt-6 text-white font-bold italic border-l-2 border-blue-600 pl-4">
+                Üst düzey bot geliştirme projeleriniz ve teknik iş birliği talepleriniz için iletişime geçebilirsiniz.
+              </span>
             </p>
 
             {/* Yetenek Kartları */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 pt-6">
               <SkillCard 
                 icon={<MessageSquare size={30} />} 
-                title="Discord Bot" 
-                desc="Gelişmiş API entegrasyonlu botlar." 
+                title="Bot Architect" 
+                desc="Gelişmiş mimariye sahip, yüksek trafikli Discord sistemleri." 
               />
               <SkillCard 
                 icon={<MonitorCheck size={30} />} 
-                title="Web Design" 
-                desc="Modern ve hızlı full-stack projeler." 
+                title="Full-Stack" 
+                desc="Modern, hızlı ve SEO odaklı profesyonel web çözümleri." 
               />
             </div>
           </div>
