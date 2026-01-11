@@ -28,7 +28,7 @@ export default function Home() {
         <div className="absolute top-[-15%] left-[-5%] w-[100%] md:w-[60%] h-[60%] bg-blue-900/10 blur-[100px] md:blur-[140px] rounded-full"></div>
       </div>
 
-      {/* Navbar - Mobilde Contact Gizli, Tarih Sağa Yaslı */}
+      {/* Navbar */}
       <nav className="relative z-50 max-w-7xl mx-auto flex flex-row justify-between items-center px-6 md:px-12 py-8 md:py-16">
         <div className="text-2xl md:text-3xl font-black-custom tracking-tighter italic">
           <span className="text-blue-600 drop-shadow-[0_0_15px_rgba(37,99,235,0.8)]">zzafwr</span>
@@ -49,14 +49,14 @@ export default function Home() {
           <div className="lg:col-span-7 space-y-8 md:space-y-12 text-left">
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="inline-flex items-center gap-4 px-4 md:px-6 py-2 rounded-full bg-blue-950/20 border border-blue-900/30 text-[9px] md:text-[11px] font-black-custom uppercase tracking-[0.4em] md:tracking-[0.5em] text-blue-500">
               <span className="w-2.5 h-2.5 rounded-full bg-blue-600 shadow-[0_0_12px_#2563eb] animate-pulse"></span>
-              EST. 2020 // EXPERT DEVELOPER
+              EXPERT DEVELOPER // HIGH PERFORMANCE
             </motion.div>
 
             <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="font-black-custom leading-[0.9] md:leading-[0.85] tracking-[-0.05em] uppercase italic blue-glow-text" style={{ fontSize: 'clamp(40px, 12vw, 110px)' }}>
               ZZAFWR <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-500 to-white">MEDİA</span>
             </motion.h1>
 
-            {/* Sadece senin istediğin profesyonel metin */}
+            {/* Yeni Profesyonel Metin (Görseldeki eski kısım burasıyla değişti) */}
             <p className="text-gray-500 text-base md:text-xl font-light leading-relaxed max-w-xl">
               "4 yıllık sektör tecrübesiyle, yüksek performanslı 
               <span className="text-blue-500 font-bold italic"> Discord bot mimarileri </span> 
